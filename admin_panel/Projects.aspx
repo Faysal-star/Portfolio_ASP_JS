@@ -3,7 +3,6 @@
     <link href="styles/projects.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Projects</h1>
     
     <div class="formItem">
          <div class="g1">
@@ -18,10 +17,9 @@
              </div>
              
             <div class="t3">
-                <p>Image</p>
                 <asp:FileUpload ID="fileProjectImage" runat="server" CssClass="upload" />
              </div>
-         </div>
+           </div>
          
         <div class="g2">
             <div class="t4">
@@ -33,7 +31,6 @@
                  <p>Tags</p>
                  <asp:TextBox ID="txtTags" runat="server" CssClass="inp"></asp:TextBox>
              </div>
-             <br />
             
             <asp:Button ID="btnAddProject" runat="server" Text="Add Project" OnClick="btnAddProject_Click" CssClass="submitBtn" />
         </div>
@@ -58,7 +55,7 @@
             </asp:TemplateField>
             <asp:BoundField DataField="URL" HeaderText="URL" />
             <asp:BoundField DataField="Tags" HeaderText="Tags" />
-            <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
+            <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" HeaderText="Customize" />
         </Columns>
     </asp:GridView>
 

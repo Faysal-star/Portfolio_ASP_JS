@@ -3,58 +3,51 @@
     margin: 0 auto;
 }
 
-.formItem{
+.eduG{
     display: flex;
-    border: 1px solid white;
-    padding: 10px 0px 20px 1px;
-    border-radius: 20px;
-    align-items: center;
     justify-content: space-around;
-    width: 90%;
-    margin: 0 auto 20px auto ;
     border: 1px solid rgba(47, 189, 255, 0.5);
-    margin-top: 150px;
+    width: 90%;
+    margin: 0 auto ;
+    border-radius: 10px;
+    margin-top: 120px;
     background: rgba(160, 160, 160, 0.055);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 3px );
 }
 
-.g1 , .g2 {
+.eduG1 , .eduG2{
     width: 40%;
-    /* border: 1px solid white; */
-    height: 100%;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.inp{
+.einp{
     width: 90%;
     padding: 5px;
+    padding-left: 10px;
     height: 40px;
     border-radius: 5px;
     font-size: 16px;
     background-color: rgba(17, 25, 40 , .85);
     border: 1px solid #0ea6ec80;
     color: white;
+    margin: 25px 0 0 0;
 }
 
-.inp:focus{
+.einp:focus{
     outline: none;
 }
 
-
-.g1 p , .g2 p{
-    margin-top: 20px;
-    margin-bottom: 5px;
-}
-
-.submitBtn{
+.ebtn{
     width: 90%;
     padding: 10px;
-    margin-top: 30px;
+    margin-top: 0px;
     border-radius: 5px;
     height: 40px;
     background-color: #2196f3;
@@ -64,26 +57,8 @@
     transition: .2s ease-in-out;
 }
 
-.submitBtn:hover{
+.ebtn:hover{
     background-color: #ffffff00;
     border: 1px solid #2196f3;
     color: white;
 }
-
-.upload{
-    width: 90%;
-    padding: 10px;
-    margin-top: 30px;
-    border-radius: 5px;
-    height: 40px;
-    background-color: rgba(17, 25, 40, 0.75);
-    border: 1px solid rgba(14, 166, 236, 0.5);
-    color: white;
-    cursor: pointer;
-}
-
-.image{
-    max-height: 100px ;
-    max-width: 100px;
-}
-

@@ -23,11 +23,14 @@
                     
                 </ul>
             </div>
+            <div class="blur-spot"></div>
             <div class="childC">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
         </div>
+
+        
     </form>
 
    <script src="scripts/admin.js"></script>

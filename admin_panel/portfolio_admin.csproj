@@ -75,6 +75,9 @@
     <Content Include="scripts\admin.js" />
     <Content Include="Skills.aspx" />
     <Content Include="styles\admin.css" />
+    <Content Include="styles\bg1.jpg" />
+    <Content Include="styles\bg2.jpg" />
+    <Content Include="styles\education.css" />
     <Content Include="styles\projects.css" />
     <Content Include="Web.config" />
   </ItemGroup>
