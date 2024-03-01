@@ -1,0 +1,78 @@
+﻿:root {
+    --bg-wild-blue-yonder: hsla(216, 33%, 68%, 1);
+    --bg-carolina-blue: hsla(199, 89%, 49%, 1);
+    --bg-prussian-blue: hsla(216, 33%, 20%, 1);
+    --bg-oxford-blue: hsla(222, 44%, 13%, 1);
+    --bg-oxford-blue-2: hsla(222, 47%, 11%, 1);
+
+    --text-white: hsla(0, 0%, 100%, 1);
+    --text-alice-blue: hsla(216, 100%, 95%, 1);
+    --text-columbia-blue: hsla(199, 69%, 84%, 1);
+    --text-wild-blue-yonder: hsla(216, 33%, 68%, 1);
+    --text-carolina-blue: hsla(199, 89%, 49%, 1);
+    --text-shadow-blue: hsla(217, 24%, 59%, 1);
+    --text-slate-gray: hsla(217, 17%, 48%, 1);
+}
+
+body {
+    background-color: var(--bg-oxford-blue);
+    color: var(--text-white);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.childC{
+    margin-top: 100px;
+}
+
+
+/* fixed positioned navbar in top middle */
+.nav{
+    background-color: rgba(17, 25, 40, 0.75);
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 5px;
+    width: 80%;
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+
+.navUl{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navUl li{
+    padding: 10px;
+}
+
+.navUl li a{
+    color: white;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+}
+
+.navUl li a:hover{
+    color: var(--text-carolina-blue);
+}
+
+.activeC {
+    color: var(--text-carolina-blue) !important;
+    text-decoration: underline !important;
+    text-underline-offset: 8px;
+}
+
+

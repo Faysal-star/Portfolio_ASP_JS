@@ -1,0 +1,15 @@
+// Faysal - 1-02-24
+function findGoal(goal) {
+  function find(start, end) {
+    if(start <= end){
+      let mid = (start + end) / 2 
+      
+      if(mid == goal) return true
+      if(mid > goal) return find(start , mid - 1)
+      return find(mid + 1 , end)
+    }
+  }
+  return find(life , death);
+}
+
+findGoal(?)

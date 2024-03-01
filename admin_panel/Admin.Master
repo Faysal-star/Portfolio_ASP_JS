@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="portfolio_admin.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="styles/admin.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="nav">
+                <ul class="navUl">
+                    <li><a href="Education.aspx">Education</a></li>
+                    <li><a href="Projects.aspx">Projects</a></li>
+                    <li><a href="Experience.aspx">Experience</a></li>
+                    <li><a href="Skills.aspx">Skills</a></li>
+                    <li><a href="Contact.aspx">Contact</a></li>
+                    <li><a href="Feedback.aspx">Feedback</a></li>
+                    
+                </ul>
+            </div>
+            <div class="childC">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+
+   <script src="scripts/admin.js"></script>
+</body>
+</html>
