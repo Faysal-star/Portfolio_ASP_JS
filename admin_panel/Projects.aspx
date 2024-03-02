@@ -36,6 +36,17 @@
         </div>
     </div>
     
+    <div class="form2">
+        <div class="g3">
+            <asp:TextBox ID="portfolioState" runat="server" CssClass="inp" placeholder="Portfolio Mode"></asp:TextBox>
+            <asp:Button ID="updateMode" runat="server" Text="Update Mode" CssClass="submitBtn" OnClick="updateMode_Click" />
+        </div>
+        <div class="g4">
+            <label class="currL">Current Mode </label>
+            <asp:Label ID="currentMode" runat="server" CssClass="curr"></asp:Label>
+        </div>
+    </div>
+    
     <asp:GridView ID="gvProjects" runat="server" AutoGenerateColumns="False" OnRowDeleting="gvProjects_RowDeleting" OnRowEditing="gvProjects_RowEditing" OnRowUpdating="gvProjects_RowUpdating" OnRowCancelingEdit="gvProjects_RowCancelingEdit" OnRowDataBound="gvProjects_RowDataBound" OnSelectedIndexChanged="gvProjects_SelectedIndexChanged" CssClass="table">
         <Columns>
             <asp:TemplateField>

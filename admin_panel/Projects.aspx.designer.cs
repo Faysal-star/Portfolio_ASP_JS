@@ -69,6 +69,33 @@ namespace portfolio_admin
         protected global::System.Web.UI.WebControls.Button btnAddProject;
 
         /// <summary>
+        /// portfolioState control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox portfolioState;
+
+        /// <summary>
+        /// updateMode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button updateMode;
+
+        /// <summary>
+        /// currentMode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label currentMode;
+
+        /// <summary>
         /// gvProjects control.
         /// </summary>
         /// <remarks>

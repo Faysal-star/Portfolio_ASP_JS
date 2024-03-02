@@ -18,6 +18,7 @@ namespace portfolio_admin
             if (!IsPostBack)
             {
                 BindProjects();
+                bindMode();
             }
         }
 
@@ -59,6 +60,8 @@ namespace portfolio_admin
             fileProjectImage = null;
 
             BindProjects();
+
+            return;
         }
 
         private void BindProjects()
@@ -88,17 +91,6 @@ namespace portfolio_admin
                         gvProjects.DataSource = ds;
                         gvProjects.DataBind();
                     }
-                    else
-                    {
-                        ds.Tables[0].Rows.Add(ds.Tables[0].NewRow());
-                        gvProjects.DataSource = ds;
-                        gvProjects.DataBind();
-                        int columncount = gvProjects.Rows[0].Cells.Count;
-                        gvProjects.Rows[0].Cells.Clear();
-                        gvProjects.Rows[0].Cells.Add(new TableCell());
-                        gvProjects.Rows[0].Cells[0].ColumnSpan = columncount;
-                        gvProjects.Rows[0].Cells[0].Text = "No Data Found";
-                    }
                 }
                 catch (SqlException ex)
                 {
@@ -109,10 +101,9 @@ namespace portfolio_admin
                     connection.Close();
                 }
 
-            } 
-            
+            }
 
-            
+            return;   
         } 
 
         protected void gvProjects_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -185,7 +176,11 @@ namespace portfolio_admin
 
         protected void gvProjects_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-            // image column to convert to base64
+            // if table is empty and no data is found escape
+            if (e.Row.RowType == DataControlRowType.EmptyDataRow)
+            {
+                return;
+            }
             if (e.Row.RowType == DataControlRowType.DataRow && (e.Row.RowState & DataControlRowState.Edit) == 0)
             {
                 byte[] bytes = (byte[])DataBinder.Eval(e.Row.DataItem, "Image");
@@ -203,6 +198,61 @@ namespace portfolio_admin
         protected void gvProjects_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void updateMode_Click(object sender, EventArgs e)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["PortfolioDB"].ConnectionString;
+
+            string query = "UPDATE Mode SET [Mode] = @Mode WHERE ID = 1";
+
+            string mode = portfolioState.Text;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Mode", mode);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+
+            bindMode();
+        }
+
+        protected void bindMode()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["PortfolioDB"].ConnectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    SqlCommand command = new SqlCommand("SELECT [Mode] FROM Mode WHERE ID = 1", connection);
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        portfolioState.Text = ds.Tables[0].Rows[0]["Mode"].ToString();
+                        currentMode.Text = ds.Tables[0].Rows[0]["Mode"].ToString();
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+            }
+
+            return;
         }
     }
 }
