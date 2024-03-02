@@ -53,7 +53,52 @@ app.get('/image' , (req, res) => {
     }
 });
 
+// get education
 
+app.get('/education', (req, res) => {
+    sql.connect(config, function (err) {
+        if (err) console.log(err);
+        var request = new sql.Request();
+        request.query('select * from Education', function (err, recordset) {
+            if (err) console.log(err)
+            users = recordset.recordset;
+            res.json(users);
+        });
+    });
+});
+
+// get contact
+
+app.get('/contact', (req, res) => {
+    sql.connect(config, function (err) {
+        if (err) console.log(err);
+        var request = new sql.Request();
+        request.query('select * from Contact', function (err, recordset) {
+            if (err) console.log(err)
+            users = recordset.recordset;
+            res.json(users);
+        });
+    });
+});
+
+// get skills
+
+app.get('/skills', (req, res) => {
+    sql.connect(config, function (err) {
+        if (err) console.log(err);
+        var request = new sql.Request();
+        request.query('select * from Skills', function (err, recordset) {
+            if (err) console.log(err)
+            users = recordset.recordset;
+            res.json(users);
+        });
+    });
+});
+
+// post feedback form data to database
+
+
+    
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`);
 });

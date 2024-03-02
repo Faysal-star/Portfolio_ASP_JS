@@ -70,6 +70,7 @@
     <Content Include="Contact.aspx" />
     <Content Include="Education.aspx" />
     <Content Include="Feedback.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Projects.aspx" />
     <Content Include="scripts\admin.js" />
     <Content Include="Skills.aspx" />
@@ -78,6 +79,8 @@
     <Content Include="styles\bg2.jpg" />
     <Content Include="styles\contact.css" />
     <Content Include="styles\education.css" />
+    <Content Include="styles\feedback.css" />
+    <Content Include="styles\login.css" />
     <Content Include="styles\projects.css" />
     <Content Include="styles\skills.css" />
     <Content Include="Web.config" />
@@ -110,6 +113,13 @@
     </Compile>
     <Compile Include="Feedback.aspx.designer.cs">
       <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Projects.aspx.cs">
       <DependentUpon>Projects.aspx</DependentUpon>

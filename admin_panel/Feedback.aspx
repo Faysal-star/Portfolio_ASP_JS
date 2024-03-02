@@ -1,8 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Feedback.aspx.cs" Inherits="portfolio_admin.Feedback" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="styles/feedback.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <!-- Feedback collection : Email , name , Feedback -->
+    
+    <h2>Feedbacks From Visitors</h2>
     <asp:GridView ID="gvFeedback" runat="server" AutoGenerateColumns="false" CssClass="table">
         <Columns>
             <asp:TemplateField>

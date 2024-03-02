@@ -1,0 +1,14 @@
+﻿body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2{
+    text-align: center;
+    margin-top: 120px;
+    color: white;
+}
+
+.table{
+    margin-top: 20px;
+}
