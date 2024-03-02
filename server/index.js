@@ -39,7 +39,7 @@ app.get('/image' , (req, res) => {
             var request = new sql.Request();
             request.query('SELECT Image from Projects where ID=2;', function (err, recordset) {
                 if (err) console.log(err)
-                // res.setHeader('Content-Type', 'image/png');
+                res.setHeader('Content-Type', 'image/png');
                 // res.send(recordset.recordset[0].Image);
                 const imageData = recordset.recordset[0].Image;
                 const imageBase64 = imageData.toString('base64');
@@ -55,6 +55,6 @@ app.get('/image' , (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`App listening at http://localhost:${port}`);
 });
 

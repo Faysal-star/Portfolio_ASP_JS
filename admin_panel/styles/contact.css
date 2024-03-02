@@ -3,53 +3,56 @@
     margin: 0 auto;
 }
 
-.eduG{
+.conG{
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-around;
-    border: 1px solid rgba(47, 189, 255, 0.5);
-    width: 70%;
-    margin: 0 auto ;
+    border: 1px solid white;
     border-radius: 10px;
-    margin-top: 120px;
+    width: 70%;
+    margin : 0 auto;
+    margin-bottom: 20px;
+    border: 1px solid rgba(47, 189, 255, 0.5);
+    margin-top: 130px;
     background: rgba(160, 160, 160, 0.055);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 3px );
+    padding: 20px 0;
 }
 
-.eduG1 , .eduG2{
-    width: 40%;
-    padding: 10px;
+.conG1 , .conG2 {
+    width: 100%;
+    height: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
 }
 
-.einp{
+.cinp{
     width: 90%;
     padding: 5px;
-    padding-left: 10px;
     height: 40px;
     border-radius: 5px;
     font-size: 16px;
     background-color: rgba(17, 25, 40 , .85);
     border: 1px solid #0ea6ec80;
     color: white;
-    margin: 25px 0 0 0;
+    margin: 10px;
 }
 
-.einp:focus{
+.cinp:focus{
     outline: none;
 }
 
-.ebtn{
+.cbtn{
     width: 90%;
     padding: 10px;
-    margin-top: 0px;
     border-radius: 5px;
     height: 40px;
+    margin-top: 17px;
     background-color: #2196f3;
     border: 1px solid #0ea6ec80;
     color: white;
@@ -57,8 +60,9 @@
     transition: .2s ease-in-out;
 }
 
-.ebtn:hover{
+.cbtn:hover{
     background-color: #ffffff00;
     border: 1px solid #2196f3;
     color: white;
 }
+

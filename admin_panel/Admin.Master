@@ -16,7 +16,6 @@
                 <ul class="navUl">
                     <li><a href="Education.aspx">Education</a></li>
                     <li><a href="Projects.aspx">Projects</a></li>
-                    <li><a href="Experience.aspx">Experience</a></li>
                     <li><a href="Skills.aspx">Skills</a></li>
                     <li><a href="Contact.aspx">Contact</a></li>
                     <li><a href="Feedback.aspx">Feedback</a></li>
