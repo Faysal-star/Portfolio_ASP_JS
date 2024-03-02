@@ -12,3 +12,38 @@ h2{
 .table{
     margin-top: 20px;
 }
+
+.sum{
+    display: flex;
+    border: 1px solid white;
+    /* padding: 10px 0px 20px 1px; */
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto 30px auto ;
+    border: 1px solid rgba(80, 198, 253, 0.904);
+    background: rgba(160, 160, 160, 0.055);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 3px );
+}
+
+.time{
+    background-color: #2196f3;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    
+
+}
+
+.total{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}

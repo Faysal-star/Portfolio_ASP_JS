@@ -5,6 +5,15 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
     <h2>Feedbacks From Visitors</h2>
+    <div class="sum">
+        <div class="time">
+            <asp:Label ID="lblTime" runat="server" Text="Time" CssClass="slabel"></asp:Label>
+        </div>
+        <div class="total">
+            <asp:Label ID="lblTotal" runat="server" Text="Total" CssClass="slabel2"></asp:Label>
+        </div>
+    </div>
+
     <asp:GridView ID="gvFeedback" runat="server" AutoGenerateColumns="false" CssClass="table">
         <Columns>
             <asp:TemplateField>

@@ -169,7 +169,31 @@ app.post('/feedback', (req, res) => {
         var request = new sql.Request();
         request.query(`INSERT INTO Feedback (Name, Email, Feedback) VALUES ('${req.body.name}', '${req.body.email}', '${req.body.feedback}')`, function (err, recordset) {
             if (err) console.log(err)
-            res.json({status: 'success'});
+            // collect all feedbacks and concat them to a single string
+            let feedbacks = "";
+
+            request.query('select * from Feedback', function (err, recordset) {
+                if (err) console.log(err)
+                users = recordset.recordset;
+                for (let i = 0; i < users.length; i++) {
+                    feedbacks += (i+1) + ". Feedback : " + users[i].Feedback + " .\n ";
+                }
+
+                let prompt = `I am a software developer and I have received the following feedbacks from my clients. I want you to summarize the feedbacks and give me a response within 5 sentences (strictly). Start with "Summary : ". The feedbacks are \n` + feedbacks;
+                //console.log(prompt);
+                model.generateContent(prompt).then((result) => {
+                    let summary = result.response.text();
+                    // escape the single quotes
+                    summary = summary.replace(/'/g, "''");
+
+                    request.query(`INSERT INTO FeedbackSummary (Summary) VALUES ('${summary}')`, function (err, recordset) {
+                        if (err) console.log(err)
+                        res.json(summary);
+                    });
+                }).catch((err) => {
+                    console.log(err);
+                });
+            });
         });
     });
 });
