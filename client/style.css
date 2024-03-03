@@ -578,6 +578,29 @@ li h3{
   transition: 0.3s;
 }
 
+.downloadCV{
+  margin-top: 10px;
+}
+
+.downloadCV a{
+  color: var(--bg-carolina-blue);
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: .15s ease-in-out;
+}
+
+.downloadCV a:hover{
+  border: 1px solid var(--bg-carolina-blue);
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+
+
 svg path{
   transition: .3s;
 }
