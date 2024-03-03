@@ -6,6 +6,7 @@ This is an AI Integrated Dynamic Portfolio Project with  Node.js + ASP.NET Backe
 <u><b>Key Features</b></u>
 
 - SQL Database for  storing Education , Projects , Feedbacks etc.
+- Backend & Admin Panel using ASP.NET
 - Server using Express.js
 - Gemini Pro Model to Summarize Feedbacks
 - Sorting best projects according to job, using AI
