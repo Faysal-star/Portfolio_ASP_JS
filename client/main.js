@@ -134,34 +134,6 @@ function displaySkill(data) {
   })
 }
 
-// project section
-// topprojectID returns top 4 project as P1=101,P2=201,P3=3107,P4=4
-// projects returns all projects as ID , Title , Description , Image , URL , Tags .
-// image is in base64 format
-// at first take the id from topprojectID and then get the project details from projects
-// template 
-/* 
-<div class="project">
-<div class="prdesc">
-<div class="upper">
-  <div class="primg">
-    <img src="./icons/dp.png" alt="pro pic">
-  </div>
-  <div class="prlink">
-    <h3>Title</h3>
-    <a href="#" class="code">
-      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M12.316 3.051a1 1 0 0 1 .633 1.265l-4 12a1 1 0 1 1-1.898-.632l4-12a1 1 0 0 1 1.265-.633M5.707 6.293a1 1 0 0 1 0 1.414L3.414 10l2.293 2.293a1 1 0 1 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.414l3-3a1 1 0 0 1 1.414 0m8.586 0a1 1 0 0 1 1.414 0l3 3a1 1 0 0 1 0 1.414l-3 3a1 1 0 1 1-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 0 1 0-1.414" clip-rule="evenodd"/></svg>
-    </a>
-    <p class="tags">C++, Java</p>
-  </div>
-</div>
-<div class="lower">
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti vel sequi necessitatibus, iusto deserunt soluta in. Excepturi blanditiis necessitatibus facere voluptates</p>
-</div> 
-</div>
-</div>
-*/
-
 let urlProject = `${prefix2}:3000/topProjects`
 let urlProjects = `${prefix2}:3000/projects`
 
@@ -304,14 +276,14 @@ fbtn.addEventListener('click', (e) => {
   document.querySelector('#fname').value = '';
   document.querySelector('#femai').value = '';
   document.querySelector('#feedback').value = '';
-  
+
 })
 
 
 async function loadAll(){
   await loadEducation();
   await loadSkill();
-  // await loadProject();
+  await loadProject();
   await loadContact();
 }
 
