@@ -16,7 +16,7 @@
             <div class="lform">
                 <asp:TextBox ID="txtCodeName" runat="server" placeholder="Code Name" CssClass="linp"></asp:TextBox>
                 <asp:TextBox ID="txtPassword" runat="server" placeholder="Password" CssClass="linp"></asp:TextBox>
-                <!-- label to show error -->
+ 
                 <asp:Label ID="lblError" runat="server" Text="" CssClass="lerror"></asp:Label>
                 <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" CssClass="lbtn"/>
             </div>

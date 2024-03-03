@@ -39,7 +39,6 @@ namespace portfolio_admin
                 connection.Close();
             }
 
-            // clear form
             txtSkillName.Text = "";
             txtSkillLevel.Text = "";
 

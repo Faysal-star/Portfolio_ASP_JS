@@ -52,7 +52,6 @@ namespace portfolio_admin
                 connection.Close();
             }
 
-            // clear form
             txtProjectTitle.Text = "";
             txtProjectDescription.Text = "";
             txtProjectURL.Text = "";
@@ -78,7 +77,6 @@ namespace portfolio_admin
                     DataSet ds = new DataSet();
                     adapter.Fill(ds);
 
-                    // convert all rows images to base64
                     /*foreach (DataRow row in ds.Tables[0].Rows)
                     {
                         byte[] bytes = (byte[])row["Image"];
@@ -176,7 +174,6 @@ namespace portfolio_admin
 
         protected void gvProjects_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-            // if table is empty and no data is found escape
             if (e.Row.RowType == DataControlRowType.EmptyDataRow)
             {
                 return;

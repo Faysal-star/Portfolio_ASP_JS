@@ -60,7 +60,6 @@ namespace portfolio_admin
                 connection.Close();
             }
 
-            // clear form
             txtAddress.Text = "";
             txtEmail.Text = "";
             txtMobile.Text = "";

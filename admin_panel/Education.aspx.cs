@@ -96,12 +96,10 @@ namespace portfolio_admin
 
         protected void btnAddEducation_Click(object sender, EventArgs e)
         {
-            // institution , degree , graduation date
             string institution = txtInstitution.Text;
             string degree = txtDegree.Text;
             string graduationDate = txtGraduationDate.Text;
 
-            // insert into database
             string connectionString = ConfigurationManager.ConnectionStrings["PortfolioDB"].ConnectionString;
 
             string query = "INSERT INTO Education (Institution, Degree, Graduation) VALUES (@Institution, @Degree, @GraduationDate)";
@@ -118,7 +116,6 @@ namespace portfolio_admin
                 connection.Close();
             }
 
-            // clear form
             txtInstitution.Text = "";
             txtDegree.Text = "";
             txtGraduationDate.Text = "";

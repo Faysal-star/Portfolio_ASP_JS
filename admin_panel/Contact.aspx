@@ -18,7 +18,6 @@
         </div>
     </div>
 
-<!-- Show Contact Adress : Address, Mobile , Email, Type -->
     <asp:GridView ID="gvContact" runat="server" AutoGenerateColumns="false" OnRowDeleting="gvContact_RowDeleting" OnRowCancelingEdit="gvContact_RowCancelingEdit" OnRowEditing="gvContact_RowEditing" OnRowUpdating="gvContact_RowUpdating" CssClass="table">
         <Columns>
             <asp:TemplateField>

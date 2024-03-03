@@ -13,7 +13,6 @@ namespace portfolio_admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // check if session exists
             if (Session["CodeName"] != null && Session["Password"] != null)
             {
                 string codeName = Session["CodeName"].ToString();
