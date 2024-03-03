@@ -1,3 +1,20 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let code = `` 
 fetch('code.txt')
   .then(response => response.text())
@@ -14,42 +31,25 @@ function displayCode(data) {
   editor.getWrapperElement().style.background = '#ffffff00';
 }
 
-// gsap scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
-
-
-// splitT.forEach((el) => {
-//     let split = new SplitType(el, {type: 'lines, words, chars'})
-//     let lines = split.lines
-//     let tl = gsap.timeline({
-//         scrollTrigger: {
-//         trigger: el,
-//         start: 'top 100%',
-//         end: 'bottom 40%',
-//         scrub: 1,
-//         markers: 1,
-//         }
-//     })
-//     tl.from(lines, {opacity: 0, y: 100, duration: 1, stagger: 0.1})
-//     })
 
 
 const splitT2 = document.querySelectorAll('.disp2')
 
 splitT2.forEach((el) => {
-    let split = new SplitType(el, {type: 'words, chars'})
-    let lines = split.words
-    let tl = gsap.timeline({
-        scrollTrigger: {
-        trigger: el,
-        start: 'top 80%',
-        end: 'bottom 70%',
-        scrub: 1,
-        markers: 0,
-        }
+  let split = new SplitType(el, {type: 'words, chars'})
+  let lines = split.words
+  let tl = gsap.timeline({
+      scrollTrigger: {
+      trigger: el,
+      start: 'top 80%',
+      end: 'bottom 70%',
+      scrub: 1,
+      markers: 0,
+      }
     })
     tl.from(lines, {opacity: 0.05, y: 15, duration: 1, stagger: 0.1})
-    })
+})
 
 
 const lenis = new Lenis()
@@ -283,7 +283,7 @@ fbtn.addEventListener('click', (e) => {
 async function loadAll(){
   await loadEducation();
   await loadSkill();
-  await loadProject();
+  // await loadProject();
   await loadContact();
 }
 
