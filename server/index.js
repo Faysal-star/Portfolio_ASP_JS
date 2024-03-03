@@ -21,14 +21,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-pro"});
 
-// ...
-
-// get users
-
-let users = [] ;
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
+// get all projects
 
 app.get('/projects', (req, res) => {
     sql.connect(config, function (err) {

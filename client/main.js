@@ -1,20 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let code = `` 
 fetch('code.txt')
   .then(response => response.text())
@@ -234,9 +217,9 @@ function displayContact(data) {
         <p class="mobile">${el.Mobile}</p>
         <p class="email">${el.Email}</p>`;
     }
-    childDiv += social
-    contactLine.innerHTML += childDiv
   })
+  childDiv += social
+  contactLine.innerHTML += childDiv
 }
 
 //send feedback 
@@ -283,7 +266,7 @@ fbtn.addEventListener('click', (e) => {
 async function loadAll(){
   await loadEducation();
   await loadSkill();
-  // await loadProject();
+  await loadProject();
   await loadContact();
 }
 
