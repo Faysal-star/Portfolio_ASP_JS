@@ -1,30 +1,150 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <meta charset="utf-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/codemirror.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/codemirror.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/mode/javascript/javascript.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/material-ocean.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/material-ocean.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="background">
-    <div class="blur-spot"></div>
-    <div id="editor"><p class="name">Life.js</p></div>
+  <div class="nav">
+    <div class="logo">
+      <h1><a href="#"><span class="colored">3.</span>141f</a></h1>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Education</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="background">
-    <h2 class="disp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo possimus voluptate repellendus minus tempore cum provident distinctio sequi voluptatibus deserunt, fugiat, ea neque illo iure aperiam modi reiciendis impedit eos eveniet magni. Nesciunt nemo nam numquam nisi. Consectetur distinctio animi, itaque alias, veniam quidem suscipit quo nesciunt explicabo nisi odio!</h2>
+  <div class="blur-spot"></div>
+  <!-- <div class="circular-blur-spot"></div> -->
+
+  <div class="section1">
+    <div class="content">
+      <h1>Hi, <br> I'm <span class="colored">Faysal Mahmud</span></h1>
+      <p>Finding the meaning of Life</p>
+      <a href="#" class="btn">Contact Me</a>
+    </div>
+    <div id="editor">
+      <p class="name">Life.js</p>
+    </div>
   </div>
-  <div class="background">
-    <h2 class="disp2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo possimus voluptate repellendus minus tempore cum provident distinctio sequi voluptatibus deserunt, fugiat, ea neque illo iure aperiam modi reiciendis impedit eos eveniet magni. Nesciunt nemo nam numquam nisi. Consectetur distinctio animi, itaque alias, veniam quidem suscipit quo nesciunt explicabo nisi odio!</h2>
+
+
+  <div class="section2">
+    <div class="img">
+      <img src="./icons/dp.png" alt="pro pic">
+    </div>
+    <div class="txt">
+      <h2 class="about_title">About Me</h2>
+      <h2 class="disp2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo possimus voluptate repellendus minus
+        tempore cum provident distinctio sequi voluptatibus deserunt, fugiat, ea neque illo iure aperiam modi reiciendis
+        impedit eos eveniet magni. Nesciunt nemo nam numquam nisi. Consectetur distinctio animi, itaque alias, veniam
+        quidem suscipit quo nesciunt explicabo nisi odio!</h2>
+    </div>
   </div>
+
+  <!-- Education section  -->
+  <div class="section3">
+    <div class="eduTitle">
+      <h2>Education</h2>
+    </div>
+    <div class="eduLine">
+      <!-- <div class="point">
+        <div>
+          <h2 class="degree">CSE</h2>
+          <h2 class="insti">KUET</h2>
+          <h3 class="year">2025</h3>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+
+  <!-- Skill section -->
+  <div class="section4">
+    <div class="skillTitle">
+      <h2>Skills</h2>
+    </div>
+    
+    <ul class="allSkill">
+      <!-- <li>
+        <h3>Html</h3>
+        <span class="bar"><span class="html" style="  width: 90%; animation : html 1s ease-in-out 0s 1 normal forwards;"></span></span>
+      </li> -->
+    </ul>
+  </div>
+
+  <!-- Project section -->
+  <div class="section5">
+    <div class="projectTitle">
+      <h2>Projects</h2>
+    </div>
+    <div class="allProject">
+      <!-- <div class="project">
+        <div class="prdesc">
+          <div class="upper">
+            <div class="primg">
+              <img src="./icons/dp.png" alt="pro pic">
+            </div>
+            <div class="prlink">
+              <h3>Title</h3>
+              <a href="#" class="code">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M12.316 3.051a1 1 0 0 1 .633 1.265l-4 12a1 1 0 1 1-1.898-.632l4-12a1 1 0 0 1 1.265-.633M5.707 6.293a1 1 0 0 1 0 1.414L3.414 10l2.293 2.293a1 1 0 1 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.414l3-3a1 1 0 0 1 1.414 0m8.586 0a1 1 0 0 1 1.414 0l3 3a1 1 0 0 1 0 1.414l-3 3a1 1 0 1 1-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 0 1 0-1.414" clip-rule="evenodd"/></svg>
+              </a>
+              <p class="tags">C++, Java</p>
+            </div>
+          </div>
+          <div class="lower">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti vel sequi necessitatibus, iusto deserunt soluta in. Excepturi blanditiis necessitatibus facere voluptates</p>
+          </div> 
+        </div>
+      </div> -->
+      
+    </div>
+  </div>
+  <div class="seeALL">
+    <a href="#">See All</a>
+  </div>
+
+  <!--Contact And Feedback -->
+  <div class="section6">
+    <div class="contactInfo">
+      <h2>Contact Me</h2>
+      <div class="contact">
+        
+      </div>
+    </div>
+    <div class="feedbackForm">
+      <h2>Feedback</h2>
+      <form action="">
+        <input type="text" placeholder="Name" id="fname">
+        <input type="email" placeholder="Email" id="femai">
+        <textarea name="" id="feedback" placeholder="Message"></textarea>
+        <button id="fbtn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>2024 &copy;  Faysal Mahmud</p>
+  </div>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/split-type"></script>
-  <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script> 
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
   <script src="./main.js"></script>
 </body>
-</html>
 
+</html>

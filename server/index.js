@@ -83,7 +83,7 @@ app.get('/topProjects',  (req, res) => {
             }
             getProjectMode().then(async (data) => {
                 queryType = data[0].Mode;
-                let prompt = `I am a software developer and I have worked on the following projects.I want you to sort out the best 4 projects I have done using ${queryType} technology. I will give you the ID , Title , Tags and Description of each project and you will return a response with only the id numbers separated by comma. Example response: P1=7, P2=2, P3=4, P4=5 . If there are not enough projects in this topic , add some related projects to make it 4. You will not reply anything else other than the comma separated ranking. The Projects are \n` + allProjects;
+                let prompt = `I am a software developer and I have worked on the following projects.I want you to sort out the best 4 projects I have done using ${queryType} technology. I will give you the ID , Title , Tags and Description of each project and you will return a response with only the id numbers separated by comma. Example response: P1=7, P2=2, P3=4, P4=5 . If there are not enough projects in this topic , add some related topic projects to make it 4 (strictly). You will not reply anything else other than the comma separated ranking. The Projects are \n` + allProjects;
 
                 console.log(prompt);
                 const result = await model.generateContent(prompt);
@@ -104,14 +104,14 @@ app.get('/image' , (req, res) => {
         sql.connect(config , function (err) {
             if (err) console.log(err);
             var request = new sql.Request();
-            request.query('SELECT Image from Projects where ID=2;', function (err, recordset) {
+            request.query('SELECT Image from Projects where ID=3013;', function (err, recordset) {
                 if (err) console.log(err)
-                res.setHeader('Content-Type', 'image/png');
-                res.send(recordset.recordset[0].Image);
-                // const imageData = recordset.recordset[0].Image;
-                // const imageBase64 = imageData.toString('base64');
-                // console.log(imageData);
-                // res.send(`<img src="data:image/jpeg;base64,${imageBase64}" />`);
+                // res.setHeader('Content-Type', 'image/png');
+                // res.send(recordset.recordset[0].Image);
+                const imageData = recordset.recordset[0].Image;
+                const imageBase64 = imageData.toString('base64');
+                console.log(imageData);
+                res.send(`<img src="data:image/jpeg;base64,${imageBase64}" />`);
             });
         });    
     } catch (err) {
