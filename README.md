@@ -4,6 +4,7 @@ This project is an Experimental AI-Integrated Dynamic Portfolio. For this projec
 
 <hr>
 <u><b>Key Features</b></u>
+
 - SQL Database for  storing Education , Projects , Feedbacks etc.
 - Backend & Admin Panel using ASP.NET
 - Server using Express.js
@@ -13,6 +14,7 @@ This project is an Experimental AI-Integrated Dynamic Portfolio. For this projec
 <hr>
 
 <u><b>Tech Stack</b></u>
+
 - Backend: Node.js, ASP.NET 
 - Database: MSSQL 
 - Frontend: HTML, CSS, Three.js, GSAP
