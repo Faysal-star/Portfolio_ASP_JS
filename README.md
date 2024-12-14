@@ -1,8 +1,6 @@
-# Portfolio Assignment for CSE 3100
+# Experimental Dynamic & FullStack Portfolio
 
-### Web Programming Lab Assignment for 3<sup>rd</sup> Year 1<sup>st</sup> Term.
-
-This is an AI Integrated Dynamic Portfolio Project with  Node.js + ASP.NET Backend and MSSQL Database.
+This project is an Experimental AI-Integrated Dynamic Portfolio. For this project, I wanted to experiment with dynamic adaptability. Whenever I apply for a job, I plan to input the job description into the Admin panel. The frontend will then automatically adjust to match the job description, updating the skill chart and showcasing projects that align with the specific requirements of the job.
 
 <hr>
 <u><b>Key Features</b></u>
@@ -12,6 +10,14 @@ This is an AI Integrated Dynamic Portfolio Project with  Node.js + ASP.NET Backe
 - Server using Express.js
 - Gemini Pro Model to Summarize Feedbacks
 - Sorting best projects according to job, using AI
+
+<hr>
+
+<u><b>Tech Stack</b></u>
+- Backend: Node.js, ASP.NET 
+- Database: MSSQL 
+- Frontend: HTML, CSS, Three.js, GSAP
+- AI Integration: Gemini Model for feedback summarization and project sorting
 
 <hr>
 
