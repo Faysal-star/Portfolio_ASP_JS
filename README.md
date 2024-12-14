@@ -1,9 +1,11 @@
+
 # Experimental Dynamic & FullStack Portfolio
 
 This project is an Experimental AI-Integrated Dynamic Portfolio. For this project, I wanted to experiment with dynamic adaptability. Whenever I apply for a job, I plan to input the job description into the Admin panel. The frontend will then automatically adjust to match the job description, updating the skill chart and showcasing projects that align with the specific requirements of the job.
 
 <hr>
-<u><b>Key Features</b></u>
+
+**Key Features**
 
 - SQL Database for  storing Education , Projects , Feedbacks etc.
 - Backend & Admin Panel using ASP.NET
@@ -11,10 +13,7 @@ This project is an Experimental AI-Integrated Dynamic Portfolio. For this projec
 - Gemini Pro Model to Summarize Feedbacks
 - Sorting best projects according to job, using AI
 
-<hr>
-
-<u><b>Tech Stack</b></u>
-
+**Tech Stack**
 - Backend: Node.js, ASP.NET 
 - Database: MSSQL 
 - Frontend: HTML, CSS, Three.js, GSAP
